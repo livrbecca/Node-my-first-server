@@ -81,7 +81,7 @@ const db = {
 
 app.get("/profiles", (req, res) => {
   const randomIndex = Math.floor(Math.random() * facts.length);
-  const randomFact = facts[randomIndex];
+  const randomFact = facts[randomIndex]; // with every refresh, the 'fact' will change
 
   res.status(200).json({
     ...oliviaProfile,
